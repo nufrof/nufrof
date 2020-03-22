@@ -1,0 +1,21 @@
+plugins {
+    id "io.freefair.lombok" version "5.0.0-rc6"
+    id 'java-library'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    api 'com.vmware.vcloud:vcd-api-client-java:0.10.0'
+    api 'javax.validation:validation-api:2.0.1.Final'
+    api 'org.apache.bval:org.apache.bval.bundle:2.0.3'
+    api 'org.jasypt:jasypt:1.9.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+}
+
+test {
+    useJUnitPlatform()
+}

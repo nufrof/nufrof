@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+archivesBaseName = 'fauxproj2'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation project (':fauxproj3')
+}
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': '../../../fauxproj3/build/libs/fauxproj3.jar ../../../nonexistant/nonexistant.jar'
+        )
+    }
+}
